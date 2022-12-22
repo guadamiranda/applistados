@@ -1,0 +1,33 @@
+
+.headerContainer {
+    height: 60px;
+    background-color: #D5BDAF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; 
+}
+
+.buttonContainer{
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+}
+
+.logoContainer {
+    display: flex;
+    width: 35%;
+    align-items: center;
+}
+
+.buttonDivisor {
+    font-size: 20px;
+}
+
+.logo{
+    padding-left: 5px;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 20px;
+
+}
