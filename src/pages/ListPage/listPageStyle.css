@@ -1,8 +1,8 @@
 
 .listContainer {
-    height: calc(100vh - 120px);
     background-color: #EDEDE9;
     display: flex;
+    height: calc(100vh - 120px);
     justify-content: center;
 }
 
