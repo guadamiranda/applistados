@@ -15,7 +15,15 @@ export const AllLists = (props) => {
                     </div> 
                 </div>
             </div>
+            <div className='buttonAddContainer'>
+                <button>Hola</button>
+            </div>
             <div className='allListCardsContainer'>
+                <ListCards/>
+                <ListCards/>
+                <ListCards/>
+                <ListCards/>
+                <ListCards/>
                 <ListCards/>
                 <ListCards/>
                 <ListCards/>

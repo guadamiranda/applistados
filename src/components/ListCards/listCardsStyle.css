@@ -4,13 +4,36 @@
     border-radius: 7px;
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 225px;
     justify-content: center;
-    width: 43%;
+    width: 14%;
     color: #F5EBE0;
     margin: 10px;
+    padding: 8px;
 }
 
 .allCardsContainer{
     height: calc(100vh - 120px);
+}
+
+.imageListCard{
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+    height: 100%;
+}
+
+.nameDescriptionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nameOfCard{
+    font-size: 20px;
+    border-bottom: 1px solid #ddd3ca;
+}
+
+.descriptionOfCard{
+    color: #F5EBE0;
 }
