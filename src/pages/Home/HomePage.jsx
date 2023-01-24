@@ -34,8 +34,8 @@ export const HomePage = (props) => {
                 </div>
                 <div className='cardsContainer'>
                     {categoriesInfo.map(category => <HomeCard categoryDescription ={category.description}
-                                                          categoryIcon={category.icon}
-                                                          categoryName={category.name} />)}   
+                                                              categoryIcon={category.icon}
+                                                              categoryName={category.name} />)}   
                 </div>       
             </div>
 }

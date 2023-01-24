@@ -1,0 +1,16 @@
+
+.listCardCard{
+    background-color: #D5BDAF;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: center;
+    width: 43%;
+    color: #F5EBE0;
+    margin: 10px;
+}
+
+.allCardsContainer{
+    height: calc(100vh - 120px);
+}

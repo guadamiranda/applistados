@@ -1,12 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css'
+import './index.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AllLists } from '../src/pages/AllLists/AllLists'
+import { ErrorPage } from './errorPage'
+import { Header } from '../src/components/Header/header'
+import { Footer } from '../src/components/Footer/footer'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/list",
+    element: <AllLists />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <Header/>
+      <RouterProvider router={router} />
+    <Footer/>
   </React.StrictMode>
 );
-

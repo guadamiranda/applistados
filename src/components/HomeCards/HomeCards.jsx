@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import './homeCardsStyle.css'
 
 export const HomeCard = ({categoryDescription, categoryIcon, categoryName}) => {
     return  <div className='homeCardContainer'>
-                <div className='cardInsideTheCard'>
+                <Link to={"/list"} state={{name: categoryName}} className='cardInsideTheCard'>
                     <div className='iconContainer'>
                         {categoryIcon}
                     </div>
@@ -12,6 +13,6 @@ export const HomeCard = ({categoryDescription, categoryIcon, categoryName}) => {
                     <div className='descriptionContainer'>
                         "{categoryDescription}"
                     </div>
-                </div>
+                </Link>
             </div>
 }
