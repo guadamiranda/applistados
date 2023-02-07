@@ -1,17 +1,20 @@
 import './listCardsStyle.css'
 
-export const ListCards = ({name, description, url}) => {
+export const ListCards = ({name, description, url, platform}) => {
     return( 
         <div className='listCardCard'>
             <div className='imageListCard'>
-                <img src={url}></img>
+                <img alt={url} src={url}></img>
             </div>
             <div className='nameDescriptionContainer'>
                 <div className='nameOfCard'>
-                    {name}
+                    <b>{name}</b>
                 </div>
                 <div className='descriptionOfCard'>
                     {description}
+                </div>
+                <div className='descriptionOfCard'>
+                    {platform}
                 </div>
             </div>
         </div> 

@@ -25,7 +25,7 @@
 }
 
 .homeTitle h3 {
-    font-size: 40px; 
+    font-size: 50px; 
     padding: 5px;
     font-weight: normal;
     
@@ -33,6 +33,10 @@
 
 .homeTitle h4 {
     color: #C29F8B
+}
+
+.homeTitle{
+    font-size: 25px; 
 }
 
 .inlineStarAndTitle {
