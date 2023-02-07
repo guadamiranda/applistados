@@ -6,13 +6,13 @@ import { FaTrash, FaEdit, FaPlus } from 'react-icons/fa';
 import videogameServices from '../../services/videogameServices'
 
 export const AllLists = (props) => {
-    const [allItems, setAllItems] = useState([])
+    const [allVideogames, setAllVideogames] = useState([])
     const location = useLocation()
     const data = location.state
 
     const getFromApi = async() => {
-        const allItems = await videogameServices.getAllVideogames()
-        setAllItems(allItems)
+        const allVideogames = await videogameServices.getAllVideogames()
+        setAllVideogames(allVideogames)
     }
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export const AllLists = (props) => {
                 <button className='buttonAddEditDelete deleteButton'>Delete <FaTrash className='iconAll redButton'/></button>
             </div>
             <div className='allListCardsContainer'>
-                {allItems.map(allItems => <ListCards name={allItems.name} description={allItems.description} url={allItems.url} platform={allItems.platform}/> )}
+                {allVideogames.map(videogame => <ListCards key={videogame.name} name={videogame.name} description={videogame.description} url={videogame.url} platform={videogame.platform}/> )}
             </div>
         </div>
     )
