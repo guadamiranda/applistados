@@ -5,6 +5,7 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AllLists } from '../src/pages/AllLists/AllLists'
 import { ErrorPage } from './errorPage'
+import { AddOrEditVideogame } from './pages/AddVideogame/AddVideogame'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     path: "/list",
     element: <AllLists />,
   },
+  {
+    path:'addOrEditVideogame',
+    element: <AddOrEditVideogame/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -1,6 +1,6 @@
 import './allListsStyle.css'
 import { ListCards } from '../../components/ListCards/ListCards'
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { FaTrash, FaEdit, FaPlus } from 'react-icons/fa';
 import { Header } from '../../components/Header/header';
@@ -33,7 +33,7 @@ export const AllLists = (props) => {
                 </div>
             </div>
             <div className='buttonAddContainer'>
-                <button className='buttonAddEditDelete addButton'>Add <FaPlus className='iconAll greenButton'/></button>
+                <Link to={"/addOrEditVideogame"} className='buttonAddEditDelete addButton'>Add <FaPlus className='iconAll greenButton'/></Link>
                 <button className='buttonAddEditDelete editButton'>Edit <FaEdit className='iconAll blueButton'/></button>
                 <button className='buttonAddEditDelete deleteButton'>Delete <FaTrash className='iconAll redButton'/></button>
             </div>
