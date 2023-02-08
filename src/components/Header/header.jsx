@@ -1,11 +1,12 @@
 import './headerStyle.css'
 import { HeaderButton } from '../HeaderButton/HeaderButton'
+import { Link } from 'react-router-dom'
 
 export const Header = (props) => {
     return  <div className="headerContainer">
-                <div className='logoContainer'>
+                <Link to={'/'} className='logoContainer'>
                     <h3 className='logo'>My FinishList</h3>
-                </div>
+                </Link>
 
                 <div className='buttonContainer'>
                     <HeaderButton textButton='Ejemplo 1'></HeaderButton>
