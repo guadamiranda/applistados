@@ -1,12 +1,9 @@
 import './headerStyle.css'
 import { HeaderButton } from '../HeaderButton/HeaderButton'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
 export const Header = (props) => {
     return  <div className="headerContainer">
                 <div className='logoContainer'>
-                    <FontAwesomeIcon icon={faHeart} beat />
                     <h3 className='logo'>My FinishList</h3>
                 </div>
 

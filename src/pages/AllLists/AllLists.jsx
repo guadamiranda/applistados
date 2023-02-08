@@ -3,6 +3,8 @@ import { ListCards } from '../../components/ListCards/ListCards'
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { FaTrash, FaEdit, FaPlus } from 'react-icons/fa';
+import { Header } from '../../components/Header/header';
+import { Footer } from '../../components/Footer/footer';
 import videogameServices from '../../services/videogameServices'
 
 export const AllLists = (props) => {
@@ -20,6 +22,8 @@ export const AllLists = (props) => {
     }, [])
 
     return(
+        <>
+        <Header/>
         <div className='bodyAppList'>
             <div className='centerThis'>
                 <div className='listNameContainer'>
@@ -37,5 +41,8 @@ export const AllLists = (props) => {
                 {allVideogames.map(videogame => <ListCards key={videogame.name} name={videogame.name} description={videogame.description} url={videogame.url} platform={videogame.platform}/> )}
             </div>
         </div>
+        <Footer/>
+        </>
+        
     )
 }
