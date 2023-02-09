@@ -9,6 +9,8 @@ import videogameServices from '../../services/videogameServices'
 
 export const AllLists = (props) => {
     const [allVideogames, setAllVideogames] = useState([])
+    const [isVisibleDelete, setIsVisibleDelete] = useState(false)
+    const [isVisibleEdit, setIsVisibleEdit] = useState(false)
     const location = useLocation()
     const data = location.state
 
@@ -34,11 +36,11 @@ export const AllLists = (props) => {
             </div>
             <div className='buttonAddContainer'>
                 <Link to={"/addOrEditVideogame"} className='buttonAddEditDelete addButton'>Add <FaPlus className='iconAll greenButton'/></Link>
-                <Link className='buttonAddEditDelete editButton'>Edit <FaEdit className='iconAll blueButton'/></Link>
-                <Link className='buttonAddEditDelete deleteButton'>Delete <FaTrash className='iconAll redButton'/></Link>
+                <button className='buttonAddEditDelete editButton' onClick={() => {isVisibleEdit ? setIsVisibleEdit(false) : setIsVisibleEdit(true)}}>Edit <FaEdit className='iconAll blueButton'/></button>
+                <button className='buttonAddEditDelete deleteButton' onClick={() => {isVisibleDelete ? setIsVisibleDelete(false) : setIsVisibleDelete(true)}}>Delete <FaTrash className='iconAll redButton'/></button>
             </div>
             <div className='allListCardsContainer'>
-                {allVideogames.map(videogame => <ListCards key={videogame.name} name={videogame.name} description={videogame.description} url={videogame.url} platform={videogame.platform}/> )}
+                {allVideogames.map(videogame => <ListCards key={videogame.name} name={videogame.name} description={videogame.description} url={videogame.url} platform={videogame.platform} isDeletedTrue={isVisibleDelete} isEditedTrue={isVisibleEdit}/> )}
             </div>
         </div>
         <Footer/>

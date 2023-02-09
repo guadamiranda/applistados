@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     height: 300px;
-    justify-content: center;
     width: 300px;
     color: #F5EBE0;
     margin: 10px;
@@ -50,3 +49,53 @@
     color: #b99f90;
 }
 
+.buttonContainerList{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+
+.buttonList{
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+.deleteButtonList{
+    background-color: #ce7b7b;
+    border: 1px solid #ce7b7b;
+    color: #F5EBE0;
+    margin-top: -15px;
+    
+}
+
+.editButtonList{
+    background-color: #6d8dbd;
+    border: 1px solid #6d8dbd;
+    color: #F5EBE0;
+    margin-top: -15px;
+}
+
+.deleteButtonList:hover{
+    background-color: #F5EBE0;
+    border: 1px solid #F5EBE0;
+    color: #ce7b7b;   
+}
+
+.editButtonList:hover{
+    background-color: #F5EBE0;
+    border: 1px solid #F5EBE0;
+    color: #6d8dbd;
+}
+
+.editButtonChikito{
+    padding-left: 3px;
+    padding-top: 3px
+}
+
+.deleteButtonChikito{
+    padding-left: 3px;
+}
