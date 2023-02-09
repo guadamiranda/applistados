@@ -11,3 +11,13 @@
 .iconFlower{
     margin: 0px 10px;
 }
+
+.spaceBetween{
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.imgEevee{
+    height: 70px;
+    width: 70px;
+}

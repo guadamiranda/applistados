@@ -34,8 +34,8 @@ export const AllLists = (props) => {
             </div>
             <div className='buttonAddContainer'>
                 <Link to={"/addOrEditVideogame"} className='buttonAddEditDelete addButton'>Add <FaPlus className='iconAll greenButton'/></Link>
-                <button className='buttonAddEditDelete editButton'>Edit <FaEdit className='iconAll blueButton'/></button>
-                <button className='buttonAddEditDelete deleteButton'>Delete <FaTrash className='iconAll redButton'/></button>
+                <Link className='buttonAddEditDelete editButton'>Edit <FaEdit className='iconAll blueButton'/></Link>
+                <Link className='buttonAddEditDelete deleteButton'>Delete <FaTrash className='iconAll redButton'/></Link>
             </div>
             <div className='allListCardsContainer'>
                 {allVideogames.map(videogame => <ListCards key={videogame.name} name={videogame.name} description={videogame.description} url={videogame.url} platform={videogame.platform}/> )}
