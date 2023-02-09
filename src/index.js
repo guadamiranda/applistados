@@ -6,21 +6,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AllLists } from '../src/pages/AllLists/AllLists'
 import { ErrorPage } from './errorPage'
 import { AddOrEditVideogame } from './pages/AddVideogame/AddVideogame'
+import { SeriesList } from './pages/SeriesList/SeriesList'
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App/>,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/list",
-    element: <AllLists />,
-  },
-  {
-    path:'addOrEditVideogame',
-    element: <AddOrEditVideogame/>
-  }
+  { path: "/", element: <App/>, errorElement: <ErrorPage /> },
+  { path: "/listVideogames", element: <AllLists /> },
+  { path: '/addOrEditVideogame', element: <AddOrEditVideogame/> },
+  { path: '/listSeries', element: <SeriesList/>}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

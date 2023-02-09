@@ -32,7 +32,7 @@ export const Footer = (props) => {
 
     return  <div className='footerContainer'>
                 {displayEevee ? <LotOfEevees/> : <></>}
-                <GiTwirlyFlower className='iconFlower'/> Made with a lot of <div className='spaceBetween' onClick={() => setDisplayEevee(true)}>❤️</div> by Guadalupe Miranda <GiTwirlyFlower className='iconFlower'/>
+                <GiTwirlyFlower className='iconFlower'/> Made with a lot of <div className='spaceBetween' onClick={() => {displayEevee ? setDisplayEevee(false) : setDisplayEevee(true)}}>{!displayEevee ? "❤️" : "💔"}</div> by Guadalupe Miranda <GiTwirlyFlower className='iconFlower'/>
                 {displayEevee ? <LotOfEevees/> : <></>}
             </div>
 } 
