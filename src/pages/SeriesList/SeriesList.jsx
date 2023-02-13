@@ -5,21 +5,27 @@ import { useEffect, useState } from 'react'
 import { FaTrash, FaEdit, FaPlus } from 'react-icons/fa';
 import { Header } from '../../components/Header/header';
 import { Footer } from '../../components/Footer/footer';
+import { Loader } from '../../components/Loader/Loader';
 import seriesServices from '../../services/seriesServices'
 
 export const SeriesList = (props) => {
     const [allSeries, setAllSeries] = useState([])
     const [isVisibleDelete, setIsVisibleDelete] = useState(false)
     const [isVisibleEdit, setIsVisibleEdit] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     const location = useLocation()
     const data = location.state
 
     const getFromApi = async() => {
         const allSeries = await seriesServices.getAllSeries()
         setAllSeries(allSeries)
+        setTimeout(function() {
+            setIsLoading(false)
+        }, 1000)
     }
 
     useEffect(() => {
+        setIsLoading(true)
         getFromApi()
     }, [])
 
@@ -27,6 +33,8 @@ export const SeriesList = (props) => {
         <>
         <Header/>
         <div className='bodyAppList'>
+        {isLoading === true ? <div className='loaderPosition'><Loader ></Loader></div> : 
+            <>
             <div className='centerThis'>
                 <div className='listNameContainer'>
                     <div className='borderListNameContainer'>
@@ -42,6 +50,7 @@ export const SeriesList = (props) => {
             <div className='allListCardsContainer'>
                 {allSeries.map(serie => <ListCards key={serie.name} name={serie.name} description={serie.description} url={serie.url} platform={serie.platform} isDeletedTrue={isVisibleDelete} isEditedTrue={isVisibleEdit}/> )}
             </div>
+            </>}
         </div>
         <Footer/>
         </>
