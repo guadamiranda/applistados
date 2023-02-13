@@ -6,6 +6,9 @@ export const Header = (props) => {
                 <Link to={'/'} className='logoContainer'>
                     <h3 className='logo'><i>My FinishList</i></h3>
                 </Link>
-                <button></button>
+                <div className='buttonSingInLogInContainter'>
+                    <button>Sing In</button>
+                    <button>Log In</button>
+                </div>
             </div>
 } 

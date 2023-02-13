@@ -43,3 +43,11 @@
     display: flex;
     align-items: center;
 }
+
+#littleCircle {
+    color: #C29F8B
+}
+
+#bigCircle {
+    color: #a78470;
+}
