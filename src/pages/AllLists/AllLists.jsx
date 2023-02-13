@@ -10,7 +10,7 @@ import videogameServices from '../../services/videogameServices'
 
 export const AllLists = (props) => {
     const [allVideogames, setAllVideogames] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const [isVisibleDelete, setIsVisibleDelete] = useState(false)
     const [isVisibleEdit, setIsVisibleEdit] = useState(false)
     const location = useLocation()

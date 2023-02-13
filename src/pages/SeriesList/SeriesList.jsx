@@ -12,7 +12,7 @@ export const SeriesList = (props) => {
     const [allSeries, setAllSeries] = useState([])
     const [isVisibleDelete, setIsVisibleDelete] = useState(false)
     const [isVisibleEdit, setIsVisibleEdit] = useState(false)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const location = useLocation()
     const data = location.state
 
